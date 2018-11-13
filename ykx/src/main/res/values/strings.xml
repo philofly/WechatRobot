@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">云控侠</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="save_location">保存坐标</string>
+    <string name="tip">点击、长按、双击地图以获取经纬度和地图状态</string>
+    <string name="current_location">当前经纬度:</string>
+     <string name="accessibility">检查被删好友辅助软件</string>
+    <string name="accessibility_description">微信机器人服务</string>
+    <string name="auto_send_sns">自动发送朋友圈</string>
+    <string name="auto_send_friends_message">群发消息</string>
+    <string name="auto_lock_screen">自动锁屏</string>
+    <string name="auto_poweroff">关机</string>
+    <string name="auto_reboot">重启机器</string>
+    <string name="auto_add_contact_friends">添加通讯录好友</string>
+    <string name="auto_search_friends">搜索加好友</string>
+    <string name="auto_like_friends">自动点赞</string>
+
+</resources>

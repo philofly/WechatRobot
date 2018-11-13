@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/uuid"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#ff0000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_send_sns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uuid"
+        android:layout_marginBottom="5dp"
+        android:text="自动发送朋友圈"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_add_contact_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_send_sns"
+        android:layout_marginBottom="5dp"
+        android:text="添加通讯录好友"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_search_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_add_contact_friends"
+        android:layout_marginBottom="5dp"
+        android:text="搜索加好友"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_send_friends_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_search_friends"
+        android:layout_marginBottom="5dp"
+        android:text="群发消息"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_like_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_send_friends_message"
+        android:layout_marginBottom="5dp"
+        android:text="自动点赞"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_lock_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_like_friends"
+        android:layout_marginBottom="5dp"
+        android:text="自动锁屏"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_poweroff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_lock_screen"
+        android:layout_marginBottom="5dp"
+        android:text="自动关机"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/auto_reboot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_poweroff"
+        android:layout_marginBottom="5dp"
+        android:text="自动重启"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/simulate_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auto_reboot"
+        android:layout_marginBottom="5dp"
+        android:text="启动虚拟定位"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/find_nearby_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simulate_gps"
+        android:layout_marginBottom="5dp"
+        android:text="附近的人"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

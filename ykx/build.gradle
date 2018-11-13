@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debugkey')
+        }
+        release {
+            storeFile file('key/robot.keystore')
+            storePassword '123456abc'
+            keyAlias 'robotkey'
+            keyPassword '123456abc'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.czfrobot.wechatrobot"
+        minSdkVersion 19
+        targetSdkVersion 19
+        versionCode 229
+        versionName "2.2.9"
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources true
+            zipAlignEnabled true
+            minifyEnabled true
+            signingConfig signingConfigs.release
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def file = output.outputFile
+            if (file.name.contains("release") && !file.name.contains("unsigned")) {
+                def name = file.name.replace(".apk",new StringBuilder().append("-").append(defaultConfig.versionName).append("-")
+                        .append(defaultConfig.versionCode).append(".apk").toString());
+                output.outputFile = new File(file.parent, name)
+            }
+        }
+    }
+
+}
+
+dependencies {
+    provided files('libs/XposedBridgeApi-54.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/jcore-android_v1.1.3.jar')
+    compile files('libs/jpush-android_v3.0.6.jar')
+    compile files('libs/MiPush_SDK_Client_3_4_0.jar')
+    compile files('libs/volly-1.0.11.jar')
+    compile files('libs/imageloader_1.9.3_forbid_longconnect.jar')
+    compile 'com.alibaba:fastjson:1.1.45.android'
+
+    compile 'com.android.support:cardview-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+}

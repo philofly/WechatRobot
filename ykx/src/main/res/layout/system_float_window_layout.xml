@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:id="@+id/emui_window_big_info"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="450dp"
+        android:background="#fff"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:background="#008cff">
+
+                <TextView
+                    android:id="@+id/guide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="11dp"
+                    android:paddingTop="21dp"
+                    android:text="悬浮窗标题1"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/guide2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/guide"
+                    android:paddingBottom="17dp"
+                    android:paddingLeft="12dp"
+                    android:text="悬浮窗标题2"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/emui_window_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
